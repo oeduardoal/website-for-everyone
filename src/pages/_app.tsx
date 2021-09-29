@@ -1,18 +1,16 @@
 import { foundationTheme } from '@grupoboticario/flora'
-import {
-  Box,
-  FloraProvider,
-  global as GlobalStyle,
-} from '@grupoboticario/flora-react'
+import { Box, FloraProvider, globalCss } from '@grupoboticario/flora-react'
+import type { AppProps } from 'next/app'
 
-const globalStyle = GlobalStyle({
+const globalStyle = globalCss({
   'html, body, body > div:first-child, div#__next, div#__next > div': {
     height: '100%',
   },
 })
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }: AppProps) => {
   globalStyle()
+
   return (
     <FloraProvider>
       <Box className={foundationTheme}>

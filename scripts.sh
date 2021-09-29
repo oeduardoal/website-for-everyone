@@ -2,7 +2,7 @@
 
 set -e
 
-export APP_NAME=template-nextjs
+export APP_NAME=template-typescript-nextjs
 
 if [ -z "$ENV" ];
   then ENV=production;
@@ -17,7 +17,7 @@ case "$1" in
   test:dev)
     export DEBUG=gb:*
     export NODE_ENV=test
-    jest --maxWorkers=50% --watch --env=jsdom --collectCoverage --detectOpenHandles
+    jest --maxWorkers=50% --watch --env=jsdom --detectOpenHandles
   ;;
   test:ci)
     export DEBUG=gb:*
@@ -31,21 +31,17 @@ case "$1" in
     next start
   ;;
   lint)
-    eslint .
+    next lint
   ;;
   build)
-    next build && next export
+    next build
   ;;
   coverage)
     ./scripts.sh test && open coverage/lcov-report/index.html
   ;;
   sonar)
-    PACKAGE_VERSION=$(cat package.json \
-      | grep version \
-      | head -1 \
-      | awk -F: '{ print $2 }' \
-      | sed 's/[",]//g' \
-      | tr -d '[[:space:]]')
+    PACKAGE_VERSION=$(node -e 'const pkg=require("./package.json");console.log(pkg.version);')
+
     echo "Extracted version: ${PACKAGE_VERSION}"
 
     REPLACE='^sonar.projectVersion=.*$'

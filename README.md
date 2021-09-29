@@ -4,11 +4,11 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=7400584a-43c1-41c1-b806-e39bc5e3f42f&metric=coverage&token=7453bb5bf931a5423d3ea39cd13796c8bc7276e0)](https://sonarcloud.io/dashboard?id=7400584a-43c1-41c1-b806-e39bc5e3f42f)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=7400584a-43c1-41c1-b806-e39bc5e3f42f&metric=sqale_rating&token=7453bb5bf931a5423d3ea39cd13796c8bc7276e0)](https://sonarcloud.io/dashboard?id=7400584a-43c1-41c1-b806-e39bc5e3f42f)
-[![Estlint](https://github.com/grupoboticario/template-nextjs/actions/workflows/lint.yml/badge.svg)](https://github.com/grupoboticario/template-nextjs/actions/workflows/lint.yml)
+[![Estlint](https://github.com/grupoboticario/template-typescript-nextjs/actions/workflows/lint.yml/badge.svg)](https://github.com/grupoboticario/template-typescript-nextjs/actions/workflows/lint.yml)
 
 ### 📚 Description
 
-Next.js template - JavaScript version. (TS version soon)
+Next.js template - Typescript Version
 
 ### 🔗 URLs
 
@@ -68,4 +68,4 @@ Use `git commit -a` to use commitizen.
 
 ### 💬 Suggestions?
 
-You're free to open a [discussion](https://github.com/grupoboticario/template-nextjs/discussions/new)
+You're free to open a [discussion](https://github.com/grupoboticario/template-typescript-nextjs/discussions/new)

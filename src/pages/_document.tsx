@@ -1,9 +1,7 @@
-/* eslint-disable @next/next/no-page-custom-font */
-import { getCssString } from '@grupoboticario/flora-react'
-import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
-import React from 'react'
+import { getCssText } from '@grupoboticario/flora-react-system'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-export default class Document extends NextDocument {
+class MyDocument extends Document {
   render() {
     return (
       <Html dir="ltr" lang="pt-BR">
@@ -20,7 +18,7 @@ export default class Document extends NextDocument {
           />
           <style
             id="stitches"
-            dangerouslySetInnerHTML={{ __html: getCssString() }}
+            dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
         </Head>
         <body>
@@ -31,3 +29,5 @@ export default class Document extends NextDocument {
     )
   }
 }
+
+export default MyDocument
