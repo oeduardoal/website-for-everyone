@@ -1,0 +1,34 @@
+name: ESLint
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v2.4.0
+        with:
+          node-version: 14.x
+
+      - name: Prepare .npmrc file
+        run: |
+          echo "@grupoboticario:registry=https://pkgs.dev.azure.com/gboticario/_packaging/BoticarioFeed/npm/registry/" >> ~/.npmrc
+          echo "always-auth=true" >> ~/.npmrc
+          echo "; begin auth token" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/gboticario/_packaging/BoticarioFeed/npm/registry/:username=${{ secrets.NPM_USER_GB }}" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/gboticario/_packaging/BoticarioFeed/npm/registry/:_password=${{ secrets.AZDO_AZUREARTIFACTS }}" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/gboticario/_packaging/BoticarioFeed/npm/registry/:email=${{ secrets.NPM_USER_GB }}" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/gboticario/_packaging/BoticarioFeed/npm/:username=${{ secrets.NPM_USER_GB }}" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/gboticario/_packaging/BoticarioFeed/npm/:_password=${{ secrets.AZDO_AZUREARTIFACTS }}" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/gboticario/_packaging/BoticarioFeed/npm/:email=${{ secrets.NPM_USER_GB }}" >> ~/.npmrc
+          echo "; end auth token" >> ~/.npmrc
+
+      - name: Install modules
+        run: npm ci
+
+      - name: Run ESLint
+        run: npx eslint . --ext .js,.jsx,.ts,.tsx

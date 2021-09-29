@@ -1,0 +1,71 @@
+{
+  "name": "template-nextjs",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grupoboticario/template-nextjs.git"
+  },
+  "keywords": [
+    "template-nextjs",
+    "flora"
+  ],
+  "author": "Grupo Boticário",
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "./scripts.sh dev",
+    "build": "./scripts.sh build",
+    "start": "./scripts.sh start",
+    "lint": "./scripts.sh lint",
+    "test": "./scripts.sh test",
+    "test:dev": "./scripts.sh test:dev",
+    "test:ci": "./scripts.sh test:ci",
+    "coverage": "./scripts.sh coverage",
+    "postversion": "./scripts.sh sonar"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "yarn test --findRelatedTests"
+    ]
+  },
+  "dependencies": {
+    "@grupoboticario/flora-react": "^0.6.15",
+    "next": "^11.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@testing-library/dom": "^8.1.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.0",
+    "@testing-library/react-hooks": "^7.0.1",
+    "@testing-library/user-event": "^13.2.1",
+    "babel-jest": "^27.0.6",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-sonarjs": "^0.10.0",
+    "git-cz": "4.7.6",
+    "husky": "^7.0.2",
+    "jest": "^27.0.6",
+    "jest-axe": "^5.0.1",
+    "jest-dom": "^4.0.0",
+    "jest-watch-typeahead": "^0.6.4",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2"
+  }
+}
