@@ -24,13 +24,12 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "yarn test --findRelatedTests"
+      "eslint --fix"
     ]
   },
   "dependencies": {
-    "@grupoboticario/flora": "^0.4.x",
-    "@grupoboticario/flora-react": "^0.7.x",
+    "@grupoboticario/flora": "^0.5.2",
+    "@grupoboticario/flora-react": "^0.7.5",
     "next": "^12.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
