@@ -14,8 +14,11 @@ import { Separator } from '~/components/Separator'
 const Home: NextPage = () => (
   <>
     <Head>
-      <title>Template Next.js</title>
-      <meta name="description" content="Template Next.js by Grupo Boticário" />
+      <title>Página de acessibilidade</title>
+      <meta
+        name="description"
+        content="Nosso compromisso com a acessibilidade"
+      />
       <link rel="icon" href="/logo.svg" />
     </Head>
     <Header />
