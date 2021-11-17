@@ -336,7 +336,15 @@ const Home: NextPage = () => (
       >
         Confira as nossas oportunidades de trabalho para PcD!
       </Text>
-      <Flex gap="$4">
+      <Flex
+        gap="$4"
+        css={{
+          flexDirection: 'column',
+          '@tablet': {
+            flexDirection: 'row',
+          },
+        }}
+      >
         <Button css={{ width: 272 }} variant="alt">
           Conheça nossas vagas
         </Button>
