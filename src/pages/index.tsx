@@ -252,6 +252,12 @@ const Home: NextPage = () => (
       </Flex>
       <Flex css={{ flexWrap: 'wrap', gap: '$4', justifyContent: 'flex-end' }}>
         <Card>
+          <Image
+            src="/actions/1.png"
+            width={328}
+            height={172}
+            alt="Comunicação acessível"
+          />
           <Heading level={6}>Comunicação acessível</Heading>
           <Text size="bodyMediumStandard" color="$medium-light-1">
             No Grupo Boticário prezamos por uma comunicação que seja acessível e
@@ -262,6 +268,12 @@ const Home: NextPage = () => (
           <Button>Acessar eventos online</Button>
         </Card>
         <Card>
+          <Image
+            src="/actions/2.png"
+            width={328}
+            height={172}
+            alt="Inclusão na Real"
+          />
           <Heading level={6}>Inclusão na Real</Heading>
           <Text size="bodyMediumStandard" color="$medium-light-1">
             O Inclusão na Real é nosso grupo de afinidades que atua para
@@ -272,6 +284,12 @@ const Home: NextPage = () => (
           <Button>Acessar Inclusão na Real</Button>
         </Card>
         <Card>
+          <Image
+            src="/actions/3.png"
+            width={328}
+            height={172}
+            alt=">Desejos de Make - Canal Acessível"
+          />
           <Heading level={6}>Desejos de Make - Canal Acessível</Heading>
           <Text size="bodyMediumStandard" color="$medium-light-1">
             Canal no Youtube com vídeos de maquiagem com audiodescrição,
@@ -282,6 +300,12 @@ const Home: NextPage = () => (
           <Button>Acessar Desejos de Make</Button>
         </Card>
         <Card>
+          <Image
+            src="/actions/4.png"
+            width={328}
+            height={172}
+            alt=">Etiquetas sensoriais"
+          />
           <Heading level={6}>Etiquetas sensoriais</Heading>
           <Text size="bodyMediumStandard" color="$medium-light-1">
             Pessoas com deficiência visual não conseguem diferenciar produtos
@@ -337,7 +361,14 @@ const Home: NextPage = () => (
         <Heading level={5}>Canais de atendimento</Heading>
         <ButtonAccessible />
       </Flex>
-      <Flex css={{ flexWrap: 'wrap', gap: '$4', justifyContent: 'flex-end' }}>
+      <Flex
+        css={{
+          flexWrap: 'wrap',
+          rowGap: 60,
+          columnGap: 30,
+          justifyContent: 'flex-end',
+        }}
+      >
         <Card css={{ backgroundColor: 'transparent', padding: 0, gap: '$1' }}>
           <Text size="overline" color="$dark-light">
             Canais de atendimento
@@ -365,7 +396,13 @@ const Home: NextPage = () => (
             Chamar no WhatsApp
           </Button>
         </Card>
-        <Card css={{ backgroundColor: 'transparent', padding: 0, gap: '$1' }}>
+        <Card
+          css={{
+            backgroundColor: 'transparent',
+            padding: 0,
+            gap: '$1',
+          }}
+        >
           <Text size="overline" color="$dark-light">
             Telefone
           </Text>
