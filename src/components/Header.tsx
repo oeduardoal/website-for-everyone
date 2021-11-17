@@ -88,7 +88,11 @@ export const Header = () => {
             alignItems: 'flex-end',
           }}
         >
-          <Button variant="unstyled" css={{ width: 50, height: 50 }}>
+          <Button
+            variant="unstyled"
+            css={{ width: 50, height: 50 }}
+            label="Buscar"
+          >
             <svg
               width="28"
               height="28"

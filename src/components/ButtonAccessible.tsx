@@ -27,6 +27,7 @@ export const ButtonAccessible = (
       padding: 0,
       ...props.css,
     }}
+    label="Botão de acessibilidade"
   >
     <svg
       width="16"
