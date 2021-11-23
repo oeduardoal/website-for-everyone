@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import Index from '~/pages'
+import Index from '../src/pages/index'
 
 describe('Index', () => {
   it('renders without crashing', () => {

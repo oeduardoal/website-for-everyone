@@ -13,6 +13,7 @@ export const Link = (
   return (
     <NextLink href={href}>
       <Text
+        tabIndex={0}
         {...props}
         as="a"
         color="$light-dark-2"

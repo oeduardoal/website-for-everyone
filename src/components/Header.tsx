@@ -3,6 +3,7 @@ import React from 'react'
 
 import { Container } from './Container'
 import { Link } from './Link'
+import { PopoverAccessibility } from './Popover'
 
 export const Header = () => {
   return (
@@ -26,50 +27,52 @@ export const Header = () => {
               justifyContent: 'space-between',
             }}
           >
-            <Button
-              variant="ghost"
-              leftIcon={
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10 1.66669C10.9167 1.66669 11.6667 2.41669 11.6667 3.33335C11.6667 4.25002 10.9167 5.00002 10 5.00002C9.08333 5.00002 8.33333 4.25002 8.33333 3.33335C8.33333 2.41669 9.08333 1.66669 10 1.66669ZM17.5 7.50002H12.5V18.3334H10.8333V13.3334H9.16667V18.3334H7.5V7.50002H2.5V5.83335H17.5V7.50002Z"
-                    fill="white"
-                  />
-                </svg>
-              }
-              rightIcon={
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4.94 5.72668L8 8.78002L11.06 5.72668L12 6.66668L8 10.6667L4 6.66668L4.94 5.72668Z"
-                    fill="white"
-                  />
-                </svg>
-              }
-              css={{
-                color: '$light-dark-2',
-                padding: 6,
-                height: 28,
-                $$boxShadow: 'inset 0 0 0 1px $colors$light-dark-2',
-                boxShadow: '$$boxShadow',
-                '&:hover': {
+            <PopoverAccessibility>
+              <Button
+                variant="ghost"
+                leftIcon={
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 1.66669C10.9167 1.66669 11.6667 2.41669 11.6667 3.33335C11.6667 4.25002 10.9167 5.00002 10 5.00002C9.08333 5.00002 8.33333 4.25002 8.33333 3.33335C8.33333 2.41669 9.08333 1.66669 10 1.66669ZM17.5 7.50002H12.5V18.3334H10.8333V13.3334H9.16667V18.3334H7.5V7.50002H2.5V5.83335H17.5V7.50002Z"
+                      fill="white"
+                    />
+                  </svg>
+                }
+                rightIcon={
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.94 5.72668L8 8.78002L11.06 5.72668L12 6.66668L8 10.6667L4 6.66668L4.94 5.72668Z"
+                      fill="white"
+                    />
+                  </svg>
+                }
+                css={{
+                  color: '$light-dark-2',
+                  padding: 6,
+                  height: 28,
+                  $$boxShadow: 'inset 0 0 0 1px $colors$light-dark-2',
                   boxShadow: '$$boxShadow',
-                  backgroundColor: 'transparent',
-                },
-              }}
-            >
-              Acessibilidade
-            </Button>
+                  '&:hover': {
+                    boxShadow: '$$boxShadow',
+                    backgroundColor: 'transparent',
+                  },
+                }}
+              >
+                Acessibilidade
+              </Button>
+            </PopoverAccessibility>
             <Link href="/a">Saiba Mais</Link>
           </Flex>
         </Container>
@@ -91,9 +94,10 @@ export const Header = () => {
           <Button
             variant="unstyled"
             css={{ width: 50, height: 50 }}
-            label="Buscar"
+            aria-label="Buscar"
           >
             <svg
+              aria-hidden
               width="28"
               height="28"
               viewBox="0 0 28 28"
