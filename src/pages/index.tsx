@@ -74,10 +74,10 @@ const Home: NextPage = () => (
           />
         </svg>
 
-        <Text size="overline" color="$medium-medium">
+        <Text tabIndex={0} size="overline" color="$medium-medium">
           Acessibilidade
         </Text>
-        <Heading level={4} color="$brand-1">
+        <Heading tabIndex={0} level={4} color="$brand-1">
           Nosso site é feito para todas as pessoas
         </Heading>
         <ButtonAccessible />
@@ -97,16 +97,26 @@ const Home: NextPage = () => (
     <Container
       css={{
         backgroundColor: '$brand-3',
-        paddingTop: '$7',
-        paddingBottom: '$7',
+        paddingTop: '$20',
+        paddingBottom: '$20',
         gap: '$3',
       }}
     >
-      <Heading level={5} color="$light-light">
-        Nosso compromisso com a acessibilidade
-      </Heading>
-      <ButtonAccessible alt />
-      <Text size="bodyLargeStandard" color="$light-light">
+      <Flex
+        gap="$4"
+        css={{
+          flexDirection: 'column',
+          '@tablet': {
+            flexDirection: 'row',
+          },
+        }}
+      >
+        <Heading tabIndex={0} level={5} color="$light-light">
+          Nosso compromisso com a acessibilidade
+        </Heading>
+        <ButtonAccessible alt />
+      </Flex>
+      <Text tabIndex={0} size="bodyLargeStandard" color="$light-light">
         O Grupo Boticário busca excelência em usabilidade, independente de
         qualquer limitação tecnológica, dificuldade ou deficiência.
         <br />
@@ -129,8 +139,8 @@ const Home: NextPage = () => (
         },
       }}
     >
-      <Flex direction="column" css={{ '@tablet': { width: '30%' } }}>
-        <Heading level={5} color="$dark-light">
+      <Flex direction="column" css={{ gap: '$5', '@tablet': { width: '30%' } }}>
+        <Heading tabIndex={0} level={5} color="$dark-light">
           Nossas ferramentas de acessibilidade
         </Heading>
         <ButtonAccessible />
@@ -149,10 +159,10 @@ const Home: NextPage = () => (
               fill="#626CC3"
             />
           </svg>
-          <Text size="bodyLargeStandard" color="$brand-1">
+          <Text tabIndex={0} size="bodyLargeStandard" color="$brand-1">
             Intérprete virtual de Libras
           </Text>
-          <Text size="bodyMediumStandard" color="$medium-light-1">
+          <Text tabIndex={0} size="bodyMediumStandard" color="$medium-light-1">
             Por meio do Hand Talk, nosso site permite a tradução automática para
             Libras. Com traduções simultâneas ajustáveis, o intérprete virtual
             garante agilidade e independência para a comunidade surda.
@@ -176,10 +186,10 @@ const Home: NextPage = () => (
               fill="#626CC3"
             />
           </svg>
-          <Text size="bodyLargeStandard" color="$brand-1">
+          <Text tabIndex={0} size="bodyLargeStandard" color="$brand-1">
             Tradução do conteúdo para Libras
           </Text>
-          <Text size="bodyMediumStandard" color="$medium-light-1">
+          <Text tabIndex={0} size="bodyMediumStandard" color="$medium-light-1">
             Quando encontrar o ícone de Libras em alguma de nossas páginas,
             basta clicar e visualizar a tradução do conteúdo por um intérprete
             humano de Libras.
@@ -199,10 +209,10 @@ const Home: NextPage = () => (
             />
           </svg>
 
-          <Text size="bodyLargeStandard" color="$brand-1">
+          <Text tabIndex={0} size="bodyLargeStandard" color="$brand-1">
             Ajuste de cores, contraste e conteúdo
           </Text>
-          <Text size="bodyMediumStandard" color="$medium-light-1">
+          <Text tabIndex={0} size="bodyMediumStandard" color="$medium-light-1">
             É possível encontrar opções para as cores e contraste de planos de
             fundo, imagens e conteúdo. Além disso, pode-se ajustar o tamanho e
             estilo das fontes. Você encontrará essas opções no menu superior dos
@@ -222,10 +232,10 @@ const Home: NextPage = () => (
               fill="#626CC3"
             />
           </svg>
-          <Text size="bodyLargeStandard" color="$brand-1">
+          <Text tabIndex={0} size="bodyLargeStandard" color="$brand-1">
             Compatibilidade com leitores de tela
           </Text>
-          <Text size="bodyMediumStandard" color="$medium-light-1">
+          <Text tabIndex={0} size="bodyMediumStandard" color="$medium-light-1">
             No nosso site, seguimos as Diretrizes de Acessibilidade de Conteúdo
             de Website (WCAG) 2.0, o que significa que mantemos o conteúdo
             amigável para leitores de tela, navegação por teclado, além de
@@ -247,8 +257,8 @@ const Home: NextPage = () => (
         },
       }}
     >
-      <Flex direction="column" css={{ '@tablet': { width: '40%' } }}>
-        <Heading level={5} color="$dark-light">
+      <Flex direction="column" css={{ gap: '$5', '@tablet': { width: '40%' } }}>
+        <Heading tabIndex={0} level={5} color="$dark-light">
           Nossas ações de acessibilidade
         </Heading>
         <ButtonAccessible />
@@ -261,8 +271,10 @@ const Home: NextPage = () => (
             height={172}
             alt="Comunicação acessível"
           />
-          <Heading level={6}>Comunicação acessível</Heading>
-          <Text size="bodyMediumStandard" color="$medium-light-1">
+          <Heading tabIndex={0} level={6}>
+            Comunicação acessível
+          </Heading>
+          <Text tabIndex={0} size="bodyMediumStandard" color="$medium-light-1">
             No Grupo Boticário prezamos por uma comunicação que seja acessível e
             compreendida por todas as pessoas. Para isso, contamos com o apoio
             de intérpretes de Libras em eventos internos e externos, além das
@@ -277,8 +289,10 @@ const Home: NextPage = () => (
             height={172}
             alt="Inclusão na Real"
           />
-          <Heading level={6}>Inclusão na Real</Heading>
-          <Text size="bodyMediumStandard" color="$medium-light-1">
+          <Heading tabIndex={0} level={6}>
+            Inclusão na Real
+          </Heading>
+          <Text tabIndex={0} size="bodyMediumStandard" color="$medium-light-1">
             O Inclusão na Real é nosso grupo de afinidades que atua para
             despertar o potencial de todas as pessoas e garantir a
             acessibilidade. Dessa forma, viabiliza que colaboradores que são
@@ -293,8 +307,10 @@ const Home: NextPage = () => (
             height={172}
             alt=">Desejos de Make - Canal Acessível"
           />
-          <Heading level={6}>Desejos de Make - Canal Acessível</Heading>
-          <Text size="bodyMediumStandard" color="$medium-light-1">
+          <Heading tabIndex={0} level={6}>
+            Desejos de Make - Canal Acessível
+          </Heading>
+          <Text tabIndex={0} size="bodyMediumStandard" color="$medium-light-1">
             Canal no Youtube com vídeos de maquiagem com audiodescrição,
             legendas e tradução em libras inspirado nas dúvidas mais populares
             da internet. Makes, técnicas, produtos e truques mais comentados se
@@ -309,8 +325,10 @@ const Home: NextPage = () => (
             height={172}
             alt=">Etiquetas sensoriais"
           />
-          <Heading level={6}>Etiquetas sensoriais</Heading>
-          <Text size="bodyMediumStandard" color="$medium-light-1">
+          <Heading tabIndex={0} level={6}>
+            Etiquetas sensoriais
+          </Heading>
+          <Text tabIndex={0} size="bodyMediumStandard" color="$medium-light-1">
             Pessoas com deficiência visual não conseguem diferenciar produtos
             com embalagens iguais, o que, infelizmente, ainda é um problema
             comum em nosso portfólio. Para resolver isso, criamos para todas as
@@ -333,6 +351,7 @@ const Home: NextPage = () => (
       }}
     >
       <Text
+        tabIndex={0}
         size="bodyLargeStandard"
         color="$light-light"
         css={{ textAlign: 'center' }}
@@ -369,7 +388,9 @@ const Home: NextPage = () => (
       }}
     >
       <Flex direction="column" css={{ '@tablet': { width: '30%' } }}>
-        <Heading level={5}>Canais de atendimento</Heading>
+        <Heading tabIndex={0} level={5}>
+          Canais de atendimento
+        </Heading>
         <ButtonAccessible />
       </Flex>
       <Flex
@@ -381,13 +402,13 @@ const Home: NextPage = () => (
         }}
       >
         <Card css={{ backgroundColor: 'transparent', padding: 0, gap: '$1' }}>
-          <Text size="overline" color="$dark-light">
+          <Text tabIndex={0} size="overline" color="$dark-light">
             Canais de atendimento
           </Text>
-          <Text size="bodyLargeStandard" color="$brand-1">
+          <Text tabIndex={0} size="bodyLargeStandard" color="$brand-1">
             41 988356914
           </Text>
-          <Text size="bodyMediumStandard" color="$medium-light-1">
+          <Text tabIndex={0} size="bodyMediumStandard" color="$medium-light-1">
             De segunda a sexta-feira, das 8h às 20h. Aos sábados, das 9h às 18h.
             Aos domingos, das 9h às 15h.
           </Text>
@@ -414,13 +435,13 @@ const Home: NextPage = () => (
             gap: '$1',
           }}
         >
-          <Text size="overline" color="$dark-light">
+          <Text tabIndex={0} size="overline" color="$dark-light">
             Telefone
           </Text>
-          <Text size="bodyLargeStandard" color="$brand-1">
+          <Text tabIndex={0} size="bodyLargeStandard" color="$brand-1">
             0800 041 3011
           </Text>
-          <Text size="bodyMediumStandard" color="$medium-light-1">
+          <Text tabIndex={0} size="bodyMediumStandard" color="$medium-light-1">
             De segunda a sábado, das 9h às 18h.
           </Text>
           <Button variant="ghost" css={{ gap: '$2', alignSelf: 'normal' }}>
@@ -440,10 +461,10 @@ const Home: NextPage = () => (
           </Button>
         </Card>
         <Card css={{ backgroundColor: 'transparent', padding: 0, gap: '$1' }}>
-          <Text size="overline" color="$dark-light">
+          <Text tabIndex={0} size="overline" color="$dark-light">
             assistente virtual
           </Text>
-          <Text size="bodyMediumStandard" color="$medium-light-1">
+          <Text tabIndex={0} size="bodyMediumStandard" color="$medium-light-1">
             De segunda a sexta-feira, das 8h às 20h. Aos sábados, das 9h às 18h.
           </Text>
           <Button variant="ghost" css={{ gap: '$2', alignSelf: 'normal' }}>
@@ -475,10 +496,10 @@ const Home: NextPage = () => (
           </Button>
         </Card>
         <Card css={{ backgroundColor: 'transparent', padding: 0, gap: '$1' }}>
-          <Text size="overline" color="$dark-light">
+          <Text tabIndex={0} size="overline" color="$dark-light">
             E-mail
           </Text>
-          <Text size="bodyMediumStandard" color="$medium-light-1">
+          <Text tabIndex={0} size="bodyMediumStandard" color="$medium-light-1">
             De segunda a sexta-feira, das 8h às 20h. Aos sábados, das 9h às 18h.
           </Text>
           <Button variant="ghost" css={{ gap: '$2', alignSelf: 'normal' }}>

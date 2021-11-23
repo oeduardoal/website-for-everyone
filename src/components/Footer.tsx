@@ -30,7 +30,7 @@ export const Footer = (props: ReactComponent) => {
       }}
     >
       <Flex direction="column" css={{ gap: '$2' }}>
-        <Text size="action" color="$light-light">
+        <Text tabIndex={0} size="action" color="$light-light">
           Redes sociais
         </Text>
         <Box>
@@ -81,7 +81,12 @@ export const Footer = (props: ReactComponent) => {
           '@tablet': { borderTop: 'none' },
         }}
       >
-        <Text size="action" color="$light-light" css={{ paddingBottom: '$2' }}>
+        <Text
+          tabIndex={0}
+          size="action"
+          color="$light-light"
+          css={{ paddingBottom: '$2' }}
+        >
           Institucional
         </Text>
         <Link href="/" size="auxiliarSmall">
@@ -100,7 +105,12 @@ export const Footer = (props: ReactComponent) => {
           '@tablet': { borderTop: 'none' },
         }}
       >
-        <Text size="action" color="$light-light" css={{ paddingBottom: '$2' }}>
+        <Text
+          tabIndex={0}
+          size="action"
+          color="$light-light"
+          css={{ paddingBottom: '$2' }}
+        >
           Links úteis
         </Text>
         <Link href="/" size="auxiliarSmall">
@@ -119,7 +129,12 @@ export const Footer = (props: ReactComponent) => {
           '@tablet': { borderTop: 'none' },
         }}
       >
-        <Text size="action" color="$light-light" css={{ paddingBottom: '$2' }}>
+        <Text
+          tabIndex={0}
+          size="action"
+          color="$light-light"
+          css={{ paddingBottom: '$2' }}
+        >
           Navegação
         </Text>
         <Link href="/" size="auxiliarSmall">
