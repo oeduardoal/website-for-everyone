@@ -86,7 +86,7 @@ export const PopoverAccessibility = ({ children }: ReactComponent) => {
   } = useAccessibilityControl()
 
   return (
-    <PopoverPrimitive.Root defaultOpen>
+    <PopoverPrimitive.Root>
       <PopoverPrimitive.Trigger asChild>{children}</PopoverPrimitive.Trigger>
       <StyledContent side="bottom" align="start" sideOffset={5} asChild>
         <Flex direction="column" gap="$4">
