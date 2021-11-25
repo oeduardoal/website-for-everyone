@@ -30,6 +30,7 @@ export const Header = () => {
             <PopoverAccessibility>
               <Button
                 variant="ghost"
+                data-testid="button-accessibility"
                 leftIcon={
                   <svg
                     width="20"

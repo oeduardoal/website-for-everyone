@@ -1,4 +1,11 @@
-import { Box, Button, Flex, Heading, Text } from '@grupoboticario/flora-react'
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Text,
+} from '@grupoboticario/flora-react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
@@ -8,7 +15,6 @@ import { Card } from '~/components/Card'
 import { Container } from '~/components/Container'
 import { Footer } from '~/components/Footer'
 import { Header } from '~/components/Header'
-import { Image } from '~/components/Image'
 import { Separator } from '~/components/Separator'
 
 const Home: NextPage = () => {
@@ -54,7 +60,7 @@ const Home: NextPage = () => {
             alignItems: 'normal',
             flexDirection: 'column',
             '@tablet': {
-              width: '40%',
+              width: '35%',
               paddingLeft: 60,
             },
             '@desktop': {
@@ -84,15 +90,19 @@ const Home: NextPage = () => {
           <ButtonAccessible />
         </Box>
         <Box
+          data-edu
           css={{
             display: 'none',
             marginBottom: -3,
+            position: 'relative',
+            height: '100%',
             '@tablet': {
               display: 'block',
+              width: '65%',
             },
           }}
         >
-          <Box as={Image} src={Banner1} alt="Banner 1" />
+          <Image src={Banner1.src} alt="Banner 1" />
         </Box>
       </Flex>
       <Container
