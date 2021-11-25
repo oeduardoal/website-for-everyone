@@ -27,10 +27,10 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GHA_PACKAGES }}
 
       - name: Install modules
-        run: npm install
+        run: yarn install
 
       - name: Run Tests
-        run: npm run test:ci
+        run: yarn test
 
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
