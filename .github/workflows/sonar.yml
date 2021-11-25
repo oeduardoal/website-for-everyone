@@ -36,7 +36,9 @@ jobs:
         uses: sonarsource/sonarcloud-github-action@master
         with:
           args: >
-            -Dsonar.projectKey=${{ secrets.SONARCLOUD_PROJECT_KEY }}
+            -Dsonar.organization=gboticario
+            -Dsonar.projectName=${{ secrets.SONAR_KEY }}
+            -Dsonar.projectKey=${{ secrets.SONAR_KEY }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
