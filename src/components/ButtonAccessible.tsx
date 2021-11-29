@@ -3,14 +3,13 @@ import {
   Button,
   Modal,
   ModalBody,
-  ModalCloseButton,
   ModalContent,
   ModalFooter,
   ModalHeader,
   styled,
   Tooltip,
 } from '@grupoboticario/flora-react'
-import React from 'react'
+import React, { MouseEvent } from 'react'
 
 import HandsSvg from '~/assets/hands.svg'
 
@@ -45,6 +44,7 @@ type AccessibleProps = {
 export const ButtonAccessible = (
   props: React.ComponentPropsWithoutRef<typeof StyledButton> & AccessibleProps,
 ) => {
+  const focusRef = React.useRef<HTMLButtonElement>(null)
   const [isOpen, setIsOpen] = React.useState(false)
   const { videoId = '', videoTitle = 'Header', ...rest } = props
 
@@ -56,6 +56,7 @@ export const ButtonAccessible = (
         text="Vídeo com a tradução do conteúdo escrito neste bloco para Libras"
       >
         <StyledButton
+          ref={focusRef}
           {...rest}
           onClick={() => setIsOpen(true)}
           css={{
@@ -86,7 +87,15 @@ export const ButtonAccessible = (
             />
           </ModalBody>
           <ModalFooter>
-            <Button onClick={() => setIsOpen(false)}>Fechar</Button>
+            <Button
+              onClick={(e: MouseEvent<HTMLButtonElement>) => {
+                e.preventDefault()
+                setIsOpen(false)
+                setTimeout(() => focusRef.current?.focus(), 50)
+              }}
+            >
+              Fechar
+            </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
