@@ -18,9 +18,10 @@ export const Card = (
         flexDirection: 'column',
         gap: '$5',
         alignItems: 'flex-start',
+        justifyContent: 'space-between',
         '&:before': { boxShadow: 'none' },
         '@tablet': {
-          width: 350,
+          width: 400,
         },
         ...css,
       }}
