@@ -35,7 +35,13 @@ const accessibleStyles = css({
         fontWeight: 'bold',
       },
     },
-    dyslexia: { true: {} },
+    dyslexia: {
+      true: {
+        '*': {
+          fontFamily: 'opendyslexic !important',
+        },
+      },
+    },
     contrast: {
       true: {
         filter: 'contrast(200%)',
