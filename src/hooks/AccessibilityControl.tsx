@@ -27,7 +27,14 @@ const accessibleStyles = css({
   variants: {
     increaseFont: {
       true: {
-        fontSize: '115%',
+        'p, a, span, label, button, input, textarea': {
+          fontSize: '1.2rem !important',
+          lineHeight: '1.3 !important',
+        },
+        'h1, h2, h3, h4, h5, h6': {
+          fontSize: '50px !important',
+          lineHeight: '1.3 !important',
+        },
       },
     },
     boldTexts: {
